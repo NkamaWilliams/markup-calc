@@ -1,0 +1,74 @@
+:root{
+    --bg-color: #fff;
+    --main: #96BFFB;
+    --main-shadow: #6D7EBE;
+    --secondary: #002754;
+    --secondary-shadow: black;
+    --secondary-text: white;
+    --accent: #0096FB;
+    --accent-text: white;
+    --accent-shadow: #12B3DE;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+main{
+    width: 90%;
+    max-width: 300px;
+    height: 500px;
+    padding: 20px;
+    border: 2px solid var(--main);
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.screen{
+    grid-area: 1 / 1 / span 2 / span 4;
+    background-color: var(--main);
+    border: 2px solid var(--main-shadow);
+    width: 100%;
+    padding: 0 15px;
+    font-size: 3em;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.btn{
+    border: none;
+    background-color: var(--main);
+    border: 2px solid var(--main-shadow);
+    border-radius: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.secondary{
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary-shadow);
+    color: var(--secondary-text);
+}
+
+.accent{
+    background-color: var(--accent);
+    border: 2px solid var(--accent-shadow);
+    color: var(--accent-text);
+}
+
+.double{
+    grid-column: span 2;
+}
